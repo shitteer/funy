@@ -405,8 +405,8 @@
 	<center>
 	<a style="cursor: pointer; padding-left: 10%;" onclick="return load();">new game</a>
 	<div id="canvas"></div>	
-	<h2>bitches : <div style="display:inline;" id="bitches"></div></h2>
-	<b>HOW TO get bitches:</b> Use your arrow keys to get the bitches.
+	<h2>buddies : <div style="display:inline;" id="buddies"></div></h2>
+	<b>HOW TO get buddies:</b> Use your arrow keys to get the buddies.
 	</center>
 	<script type="text/javascript">
     <!--
@@ -416,7 +416,7 @@
 	var max = size - 1;
 	
 	var isMoved = false;
-	var bitches = 0;
+	var buddies = 0;
 	
 	var excludeIds = [];
 
@@ -450,8 +450,8 @@
 		document.getElementById(id1).style.backgroundColor = getColor(2);
 		document.getElementById(id2).style.backgroundColor = getColor(2);
 		
-		bitches = 0;
-		document.getElementById("bitches").innerHTML = bitches;
+		buddies = 0;
+		document.getElementById("buddies").innerHTML = buddies;
 
 		return false;
 	}
@@ -499,7 +499,7 @@
 							document.getElementById((k+1)+""+j).innerHTML = "";
 							document.getElementById((k+1)+""+j).style.backgroundColor = "#ffffff";
 							isMoved = true;
-							bitches += (val+nVal);
+							buddies += (val+nVal);
 						}
 					}
 					break;
@@ -549,7 +549,7 @@
 							document.getElementById(i+""+(k+1)).innerHTML = "";
 							document.getElementById(i+""+(k+1)).style.backgroundColor = "#ffffff";
 							isMoved = true;
-							bitches += (val+nVal);
+							buddies += (val+nVal);
 						}
 					}
 					break;
@@ -599,7 +599,7 @@
 							document.getElementById((k-1)+""+j).innerHTML = "";
 							document.getElementById((k-1)+""+j).style.backgroundColor = "#ffffff";
 							isMoved = true;
-							bitches+= (val+nVal);
+							buddies+= (val+nVal);
 						}
 					}
 					break;
@@ -649,7 +649,7 @@
 							document.getElementById(i+""+(k-1)).innerHTML = "";
 							document.getElementById(i+""+(k-1)).style.backgroundColor = "#ffffff";
 							isMoved = true;
-							bitches+= (val+nVal);
+							buddies+= (val+nVal);
 						}
 					}
 					break;
@@ -691,8 +691,8 @@
 				}
 			}
 		}		
-		//Update bitches
-		document.getElementById("bitches").innerHTML = bitches;
+		//Update buddies
+		document.getElementById("buddies").innerHTML = buddies;
 		if(allFilled) {
 			checkGameOver();
 		}
@@ -725,7 +725,7 @@
 			}
 		}
 		if(isOver) {
-			alert("you lost all the bitches");
+			alert("you lost all the buddies");
 		}
 		return false;
 	}
